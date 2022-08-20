@@ -1,0 +1,26 @@
+int C = 0;
+string RR;
+Decimal N, Total = 0;
+Boolean R = false;
+while (R == false)
+{
+    Console.Write("Write the number to add: ");
+    N = Convert.ToDecimal(Console.ReadLine());
+    Total += N;
+    C++;
+    if (C >= 2)
+    {
+        Console.Write("There is another Number? Y - Yes  o  N - No ");
+        RR = Console.ReadLine();
+        RR = RR.ToUpper();
+        if (RR == "Y")
+            R = false;
+        else if (RR == "N")
+            R = true;
+        else
+            Console.WriteLine("ERROR!... Invalid Input...");
+    }
+    Console.Clear();
+}
+Console.WriteLine("the sum of all the numbers is: " + Total);
+Console.ReadKey();
